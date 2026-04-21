@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SOCIAL MEDIA PREVIEW (OG TAGS) -->
+    <meta property="og:title" content="Download PilateSafe" />
+    <meta property="og:description" content="Stay safe and strong with PilateSafe." />
+    <meta property="og:image" content="https://github.com/StuTheSoSo/StURL/blob/main/pilateSafe/icon.png?raw=true" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.io" />
+
+    <title>Redirecting to PilateSafe...</title>
+
+    <script>
+        (function() {
+            var ios = "https://apps.apple.com/us/app/pilatesafe/id6762093768";
+            // Currently no Android link, so we default to the App Store preview
+            var android = "https://apps.apple.com/us/app/pilatesafe/id6762093768";
+            var fallback = ios; 
+
+            var ua = navigator.userAgent.toLowerCase();
+            
+            // Detection for iPhone/iPad (including Desktop Mode)
+            var isIOS = /iphone|ipad|ipod/.test(ua);
+            var isMacWithTouch = (ua.indexOf("macintosh") > -1 && navigator.maxTouchPoints > 0);
+
+            if (isIOS || isMacWithTouch) {
+                window.location.replace(ios);
+            } else if (/android/.test(ua)) {
+                window.location.replace(android);
+            } else {
+                window.location.replace(fallback);
+            }
+        })();
+    </script>
+</head>
+<body style="font-family: -apple-system, sans-serif; text-align: center; padding-top: 100px; color: #333; background-color: #f9f9f9;">
+    <!-- Visual display of the PilateSafe icon -->
+    <img src="https://github.com/StuTheSoSo/StURL/blob/main/pilateSafe/icon.png?raw=true" width="120" style="border-radius: 22%; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <p style="font-size: 1.2em;">Opening <strong>PilateSafe</strong>...</p>
+    <p><small>If the store doesn't open, <a href="https://apps.apple.com/us/app/pilatesafe/id6762093768">click here</a>.</small></p>
+</body>
+</html>
